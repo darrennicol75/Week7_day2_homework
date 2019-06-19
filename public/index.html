@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src ="./js/bundle.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <header><h1>Currency Converter</h1></header>
+<button v-on:click="fetchRates">get rates</button>
+<div>
+<label for="">Select Rate</label>
+<input v-model="selectCurrencyRate" type="text">
+</div>
+
+<div v-for="(rate, value) in filterRate">
+  <ul>
+    <li >{{ rate }}: {{ value }}</li>
+  </ul>
+
+  <!-- <div v-for="(value, name) in object">
+    {{ name }}: {{ value }}
+  </div> -->
+
+<ul>
+  <li v-for="rate in rates">{{ rate }}</li>
+</ul>
+
+</div>
+</div>
+
+</body>
+</html>
